@@ -16,6 +16,7 @@ const ProjectCardSection = () => {
               talk={ele.talk}
               techStack={ele.techStack}
               id={ele.id}
+              link={ele.link}
             />
           );
         })}

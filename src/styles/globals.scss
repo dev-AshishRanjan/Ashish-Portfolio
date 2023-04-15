@@ -45,7 +45,7 @@
   --module-bg: rgba(255, 255, 255, 0.7);
   --bg-1: rgb(255, 244, 254);
   --bg-2: rgba(255, 244, 254, 0.5);
-  --card-bg: rgba(255, 255, 255, 0.3);
+  --card-bg: rgba(255, 255, 255, 0.35);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -91,7 +91,7 @@
     --module-bg: rgba(255, 255, 255, 0.7);
     --bg-1: rgb(255, 244, 254);
     --bg-2: rgba(255, 244, 254, 0.5);
-    --card-bg: rgba(255, 255, 255, 0.3);
+    --card-bg: rgba(255, 255, 255, 0.35);
   }
 }
 

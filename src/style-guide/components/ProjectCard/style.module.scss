@@ -6,7 +6,8 @@
   align-items: flex-start;
   flex-direction: column;
   color: var(--white);
-  width: 20rem;
+  width: 25rem;
+  min-height: 17rem;
   padding: 1rem;
   gap: 1.5rem;
 
@@ -15,8 +16,15 @@
   h3 {
     font-size: 1.5rem;
   }
-
+  p{
+    opacity: .8;
+    font-size: 1.2rem
+  }
   div {
+    @include mixins.flexCenter;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     svg {
       font-size: 2rem;
       margin-right: 1rem;

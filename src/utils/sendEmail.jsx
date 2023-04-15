@@ -1,13 +1,13 @@
 import { MailServiceClient } from "@sendgrid/client";
 
-const sendEmail = async (to, body) => {
+const sendEmail = async (body) => {
   try {
     const client = new MailServiceClient();
     client.setApiKey(process.env.SENDGRID_API_KEY);
     const request = {
       body: {
-        personalizations: [{ to: [{ email: to }] }],
-        // to:to,
+        personalizations: [{ to: [{ email: "kumarashishranjan4971@gmail.com" }] }],
+        to: { email: "kumarashishranjan4971@gmail.com" },
         from: { email: "kumarashishranjan4971@gmail.com" },
         subject: "Email from Portfolio!",
         content: [{ type: "text/plain", value: body }],
