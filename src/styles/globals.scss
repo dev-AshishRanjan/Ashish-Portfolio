@@ -1,0 +1,123 @@
+// @forward "src/styles/globals.scss" as list-*;
+// @import url("/variable.scss");
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Stencil+Text:wght@500&family=Festive&family=Inter&family=Lobster+Two:wght@400;700&family=Montserrat&family=Poppins:wght@300&family=Roboto+Mono&family=Sirin+Stencil&family=Splash&family=Stylish&family=Supermercado+One&family=Titillium+Web&family=Ubuntu:wght@300;500;700&display=swap");
+
+// The variable file
+.dark {
+  --primary-color-1: rgb(63, 59, 108);
+  --primary-color-2: rgb(98, 79, 130);
+  --primary-color-3: rgb(159, 115, 171);
+  --primary-color-4: rgb(163, 199, 214);
+  --spinner-bg: rgba(63, 59, 108, 0.5);
+  --heroSection-bg1: rgb(23, 23, 23);
+  --heroSection-bg2: rgb(58, 21, 88);
+  --white: white;
+  --black: black;
+  --hero-ring-light: rgb(100, 35, 154);
+  // --card-bg1: rgba(10, 10, 10, 1);
+  // --card-bg2: rgb(83, 74, 150);
+  --profilecard-bg1: rgb(35, 3, 35);
+  --ring-shadow: black;
+  --btn-bg-1: rgb(95, 30, 148);
+  --btn-bg-2: rgb(153, 85, 207);
+  --module-bg: rgba(0, 0, 0, 0.7);
+  --bg-1:black;
+  --bg-2:rgba(0, 0, 0, 0.5);
+}
+.light {
+  --primary-color-1: rgb(250, 248, 241);
+  --primary-color-2: rgb(250, 234, 177);
+  --primary-color-3: rgb(122, 0, 149);
+  --primary-color-4: rgb(197, 137, 64);
+  --spinner-bg: rgba(250, 248, 241, 0.5);
+  --heroSection-bg1: rgb(255, 230, 253);
+  --heroSection-bg2: rgb(174, 75, 255);
+  --white: black;
+  --black: white;
+  --hero-ring-light: rgb(174, 75, 255);
+  --card-bg1: rgba(0, 0, 0, 0.2);
+  --profilecard-bg1: rgb(35, 3, 35);
+  --ring-shadow: grey;
+  --btn-bg-1: rgb(166, 57, 255);
+  --btn-bg-2: rgb(191, 112, 255);
+  --module-bg: rgba(255, 255, 255, 0.7);
+  --bg-1:rgb(255, 244, 254);
+  --bg-2:rgba(255, 244, 254, 0.5);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color-1: rgb(63, 59, 108);
+    --primary-color-2: rgb(98, 79, 130);
+    --primary-color-3: rgb(159, 115, 171);
+    --primary-color-4: rgb(163, 199, 214);
+    --spinner-bg: rgba(63, 59, 108, 0.5);
+    --heroSection-bg1: rgb(23, 23, 23);
+    --heroSection-bg2: rgb(58, 21, 88);
+    --white: white;
+    --black: black;
+    --hero-ring-light: rgb(100, 35, 154);
+    // --card-bg1: rgba(10, 10, 10, 1);
+    // --card-bg2: rgb(83, 74, 150);
+    --profilecard-bg1: rgb(35, 3, 35);
+    --ring-shadow: black;
+    --btn-bg-1: rgb(95, 30, 148);
+    --btn-bg-2: rgb(153, 85, 207);
+    --module-bg: rgba(0, 0, 0, 0.7);
+    --bg-1:black;
+    --bg-2:rgba(0, 0, 0, 0.5);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color-1: rgb(250, 248, 241);
+    --primary-color-2: rgb(250, 234, 177);
+    --primary-color-3: rgb(122, 0, 149);
+    --primary-color-4: rgb(197, 137, 64);
+    --spinner-bg: rgba(250, 248, 241, 0.5);
+    --heroSection-bg1: rgb(255, 230, 253);
+    --heroSection-bg2: rgb(174, 75, 255);
+    --white: black;
+    --black: white;
+    --hero-ring-light: rgb(174, 75, 255);
+    --card-bg1: rgba(0, 0, 0, 0.2);
+    --profilecard-bg1: rgb(35, 3, 35);
+    --ring-shadow: grey;
+    --btn-bg-1: rgb(166, 57, 255);
+    --btn-bg-2: rgb(191, 112, 255);
+    --module-bg: rgba(255, 255, 255, 0.7);
+    --bg-1:rgb(255, 244, 254);
+    --bg-2:rgba(255, 244, 254, 0.5);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background: radial-gradient(
+    circle at bottom right,
+    var(--btn-bg-1),
+    var(--btn-bg-2)
+  );
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white;
+
+  &:hover {
+    background: radial-gradient(
+      circle at top right,
+      var(--btn-bg-1),
+      var(--btn-bg-2)
+    );
+  }
+}
+// body {
+//   // overflow-y: scroll;
+// }

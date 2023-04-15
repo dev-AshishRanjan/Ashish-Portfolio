@@ -1,0 +1,55 @@
+import React, { useState, useEffect } from "react";
+import Navbar from "@/style-guide/components/navbar";
+import Loader from "@/style-guide/components/Loader";
+import Hamburger from "@/style-guide/components/Hamburger-nav";
+import styles from "./style.module.scss";
+
+const Layout = ({ children }) => {
+  const [load, setLoad] = useState(true);
+  const [mobileHamClicked, setMobileHamClicked] = useState(false);
+  const [theme, setTheme] = useState("system");
+  const [top, setTop] = useState(0);
+  const [left, setLeft] = useState(0)
+
+  useEffect(() => {
+    loadercall();
+  }, []);
+  const loadercall = () => {
+    setTimeout(function () {
+      setLoad(false);
+      const cursor = document.querySelector(`.${styles.cursor}`);
+      document.body.onpointermove = e => {
+        const { clientX, clientY } = e;
+        cursor.animate({
+          left: `calc(${clientX}px - 120px)`,
+          top: `calc(${clientY}px - 120px)`
+        }, { duration: 1500, fill: "forwards" });
+      }
+    }, 2500);
+  };
+  return (
+    <>
+      {load ? (
+        <Loader />
+      ) : (
+        <>
+          <div className={`${theme}`}>
+            <div className={styles.background}>
+              <div className={styles.cursor}></div>
+              <div className={styles.body}>
+                <Navbar mobileHamClicked={mobileHamClicked} setTheme={setTheme} />
+                <Hamburger
+                  mobileHamClicked={mobileHamClicked}
+                  setMobileHamClicked={setMobileHamClicked}
+                />
+                {children}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </>
+  );
+};
+
+export default Layout;

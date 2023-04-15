@@ -1,0 +1,40 @@
+@use "../../../styles/mixins.scss";
+.hamMenu {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  gap: 0.2rem;
+  .ham1 {
+    height: 0.3rem;
+    width: 2rem;
+    background: radial-gradient(
+      circle at bottom right,
+      rgb(95, 30, 148),
+      rgb(153, 85, 207)
+    );
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .hamInitial {
+    transform: unset;
+  }
+  .upperHam {
+    transform: translateY(-0.1rem) rotateZ(45deg);
+  }
+  .midHam {
+    transform: translateX(3rem);
+    scale: 0;
+  }
+  .lowerHam {
+    transform: translateY(0.1rem) rotateZ(-45deg);
+  }
+}
+
+@media (min-width: 769px) {
+  .hamMenu {
+    display: none;
+  }
+}

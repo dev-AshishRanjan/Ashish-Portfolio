@@ -1,0 +1,28 @@
+@use "../../../styles/mixins.scss";
+.error {
+  height: 100vh;
+  width: 100vw;
+  @include mixins.flexCenter;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  // background: radial-gradient(
+  //   circle at center,
+  //   var(--heroSection-bg2),
+  //   var(--heroSection-bg1) 40%
+  // );
+  overflow: hidden !important;
+  color: var(--white);
+
+  h1 {
+    font-size: 3rem;
+    font-family: Anton, sans-serif;
+    letter-spacing: 0.2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+}

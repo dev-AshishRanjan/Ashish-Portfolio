@@ -1,0 +1,99 @@
+@use "../../../styles/mixins.scss";
+.main{
+  height: 100vh;
+  width: 100vw;
+  @include mixins.flexCenter;
+  color: var(--white);
+  .data{
+    padding: 1rem 5rem;
+    width: 60%;
+    @include mixins.flexCenter;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    overflow: hidden;
+    .hello{
+      @include mixins.flexCenter;
+      gap: 2rem;
+      hr{
+        width: 25rem;
+        height: 1px;
+        border: none;
+        outline: none;
+        background:var(--white);
+      }
+    }
+    span{
+      font-size:2rem;
+      font-family: 'Anton', serif;
+    }
+    h3{
+      font-size:3rem;
+      font-family: 'Anton', serif;
+    }
+    p{
+      position: absolute;
+      font-size:7rem;
+      font-family: 'Anton', serif;
+      font-weight: 900;filter: invert(.8);
+      z-index: -1;
+    }
+
+    .typewriter{
+      span{
+        font-size:5rem;
+        font-family: 'Anton', serif;
+        font-weight: 500;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.5px var(--primary-color-4);
+      }
+    }
+  }
+  .lottie{
+    width: 40%;
+    @include mixins.flexCenter;
+  }
+}
+
+@media (max-width: 769px){
+  .main{
+    flex-direction: column;
+    gap: 3rem;
+    .data{
+      width: 100%;
+      padding: 1rem 1rem;
+      .hello{
+        @include mixins.flexCenter;
+        gap: 1rem;
+        hr{
+          width: 14rem;
+        }
+      }
+      span{
+        font-size:1.5rem;
+        font-family: 'Anton', serif;
+      }
+      h3{
+        font-size:1.7rem;
+        font-family: 'Anton', serif;
+      }
+      p{
+        top: 1rem;
+        left: 2rem;
+      }
+
+      .typewriter{
+        font-size:1rem;
+        span{
+          font-size:2rem;
+        }
+      }
+    }
+    .lottie{
+      @include mixins.flexCenter;
+      width:100%;
+    }
+  }
+}
