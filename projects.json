@@ -3,63 +3,81 @@
     "id": 1,
     "title": "CSS Website",
     "talk": "The Official Website of CSS, NITS. It's used for organisizing with Registerations for ABACUS. This is a team Project",
-    "techStack": ["nextjs", "css-3","husky","typescript"],
-    "link":"https://nitscss.live"
+    "techStack": ["nextjs", "css-3", "husky", "typescript"],
+    "link": "https://nitscss.live"
   },
   {
     "id": 2,
     "title": "CSS Admin Console",
     "talk": "The Official Admin console of CSS, NITS. It's used for management of CSS Official Database. This is a team Project",
-    "techStack": ["react", "css-3","husky"],
-    "link":"https://css-adminconsole.netlify.app/"
+    "techStack": ["react", "css-3", "husky"],
+    "link": "https://css-adminconsole.netlify.app/"
   },
   {
     "id": 3,
     "title": "BIDBAZZAR",
     "talk": "This is a live time Bidding website with 3 types of bidding. This was our project for GDSC Explore. This is a team project",
-    "techStack": ["nextjs", "sass","socket-io","chartjs"],
-    "link":"https://bid-bazaar-frontend.vercel.app/"
+    "techStack": ["nextjs", "sass", "socket-io", "chartjs"],
+    "link": "https://bid-bazaar-frontend.vercel.app/"
   },
   {
     "id": 4,
     "title": "Search Engine",
     "talk": "A search engine created with nextjs an inspired by Zorin Search",
-    "techStack": ["nextjs", "sass","typescript"],
-    "link":"https://search-engine-ruby.vercel.app/"
+    "techStack": ["nextjs", "sass", "typescript"],
+    "link": "https://search-engine-ruby.vercel.app/"
   },
   {
     "id": 5,
     "title": "Anime Vue Web",
     "talk": "A basic implementation of Vue concepts with anime api",
     "techStack": ["vue", "sass"],
-    "link":"https://anime-vue-web.vercel.app/"
+    "link": "https://anime-vue-web.vercel.app/"
   },
   {
     "id": 6,
     "title": "Alpha Tracker",
     "talk": "A Expense Tracker Website for college students and a team project for NITSHACKS 5.0",
-    "techStack": ["react", "sass","nodejs","express","socket-io","chartjs","jspdf","cors"],
-    "link":"https://alpha-tracker.netlify.app/"
+    "techStack": [
+      "react",
+      "sass",
+      "nodejs",
+      "express",
+      "socket-io",
+      "chartjs",
+      "jspdf",
+      "cors"
+    ],
+    "link": "https://alpha-tracker.netlify.app/"
   },
   {
     "id": 7,
     "title": "PWA Movie App",
     "talk": "A Personal Project created with TMDB for movie informations",
-    "techStack": ["react", "sass","chartjs","framer"],
-    "link":"https://movie144.netlify.app"
+    "techStack": ["react", "sass", "chartjs", "framer"],
+    "link": "https://movie144.netlify.app"
   },
   {
     "id": 8,
     "title": "PWA ADV Chat App",
     "talk": "A Personal Project created with socketio. It a PWA chat app with previous chats available",
-    "techStack": ["react", "sass","nodejs","express","socket-io","chartjs","jspdf","cors"],
-    "link":"https://adv-chatapp144.netlify.app/"
+    "techStack": [
+      "react",
+      "sass",
+      "nodejs",
+      "express",
+      "socket-io",
+      "chartjs",
+      "jspdf",
+      "cors"
+    ],
+    "link": "https://adv-chatapp144.netlify.app/"
   },
   {
     "id": 9,
     "title": "XomoY : Music App",
     "talk": "A Personal Project created for OA of An Interview. It's contains Assamese songs only",
     "techStack": ["react", "sass"],
-    "link":"https://xomoy144.netlify.app"
+    "link": "https://xomoy144.netlify.app"
   }
 ]

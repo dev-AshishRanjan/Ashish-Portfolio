@@ -16,9 +16,9 @@
   h3 {
     font-size: 1.5rem;
   }
-  p{
-    opacity: .8;
-    font-size: 1.2rem
+  p {
+    opacity: 0.8;
+    font-size: 1.2rem;
   }
   div {
     @include mixins.flexCenter;
@@ -29,5 +29,11 @@
       font-size: 2rem;
       margin-right: 1rem;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 20rem;
   }
 }

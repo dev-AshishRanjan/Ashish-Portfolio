@@ -6,7 +6,9 @@ const sendEmail = async (body) => {
     client.setApiKey(process.env.SENDGRID_API_KEY);
     const request = {
       body: {
-        personalizations: [{ to: [{ email: "kumarashishranjan4971@gmail.com" }] }],
+        personalizations: [
+          { to: [{ email: "kumarashishranjan4971@gmail.com" }] },
+        ],
         to: { email: "kumarashishranjan4971@gmail.com" },
         from: { email: "kumarashishranjan4971@gmail.com" },
         subject: "Email from Portfolio!",

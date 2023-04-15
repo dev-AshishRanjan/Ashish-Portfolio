@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import styles from "./style.module.scss";
 
-const ProjectCard = ({ title, talk, techStack, id,link }) => {
+const ProjectCard = ({ title, talk, techStack, id, link }) => {
   return (
     <a href={link} className={styles.card} target="_blank">
       <h3>{title}</h3>
