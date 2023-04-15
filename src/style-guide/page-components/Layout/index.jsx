@@ -8,8 +8,8 @@ const Layout = ({ children }) => {
   const [load, setLoad] = useState(true);
   const [mobileHamClicked, setMobileHamClicked] = useState(false);
   const [theme, setTheme] = useState("system");
-  const [top, setTop] = useState(0);
-  const [left, setLeft] = useState(0)
+  // const [top, setTop] = useState(0);
+  // const [left, setLeft] = useState(0);
 
   useEffect(() => {
     loadercall();
@@ -17,15 +17,20 @@ const Layout = ({ children }) => {
   const loadercall = () => {
     setTimeout(function () {
       setLoad(false);
-      const cursor = document.querySelector(`.${styles.cursor}`);
-      document.body.onpointermove = e => {
+      document.body.onpointermove = (e) => {
         const { clientX, clientY } = e;
-        cursor.animate({
-          left: `calc(${clientX}px - 120px)`,
-          top: `calc(${clientY}px - 120px)`
-        }, { duration: 1500, fill: "forwards" });
-      }
-    }, 2500);
+        setTimeout(() => {
+          const cursor = document.querySelector(`.${styles.cursor}`);
+          cursor.animate(
+            {
+              left: `calc(${clientX}px - 120px)`,
+              top: `calc(${clientY}px - 120px)`,
+            },
+            { duration: 1500, fill: "forwards" }
+          );
+        }, 100)
+      };
+    }, 2550);
   };
   return (
     <>
@@ -37,7 +42,10 @@ const Layout = ({ children }) => {
             <div className={styles.background}>
               <div className={styles.cursor}></div>
               <div className={styles.body}>
-                <Navbar mobileHamClicked={mobileHamClicked} setTheme={setTheme} />
+                <Navbar
+                  mobileHamClicked={mobileHamClicked}
+                  setTheme={setTheme}
+                />
                 <Hamburger
                   mobileHamClicked={mobileHamClicked}
                   setMobileHamClicked={setMobileHamClicked}

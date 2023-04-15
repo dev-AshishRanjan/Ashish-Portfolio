@@ -1,0 +1,9 @@
+@use "../../../styles/mixins.scss";
+.ProjectsHero{
+  @include mixins.flexCenter;
+  flex-direction: column;
+  height: 80vh;
+  .lottie{
+    margin-top: 3rem;
+  }
+}

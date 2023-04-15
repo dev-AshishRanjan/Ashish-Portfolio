@@ -9,12 +9,12 @@ const Loader = () => {
     setInterval(() => {
       let value = ["A", "S", "H", "I", "S", "H"];
       for (var i = Math.floor(count); i < 6; i++) {
-        value[i] = (alphas[Math.floor(Math.random() * 26)]);
+        value[i] = alphas[Math.floor(Math.random() * 26)];
       }
       setName(value.join(""));
-      count += (1 / 30);
-    }, 10)
-  }, [])
+      count += 1 / 30;
+    }, 10);
+  }, []);
   return (
     <div className={styles.loader}>
       <p>{name}</p>

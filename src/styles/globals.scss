@@ -22,8 +22,9 @@
   --btn-bg-1: rgb(95, 30, 148);
   --btn-bg-2: rgb(153, 85, 207);
   --module-bg: rgba(0, 0, 0, 0.7);
-  --bg-1:black;
-  --bg-2:rgba(0, 0, 0, 0.5);
+  --bg-1: black;
+  --bg-2: rgba(0, 0, 0, 0.5);
+  --card-bg:rgba(255,255,255,0.1);
 }
 .light {
   --primary-color-1: rgb(250, 248, 241);
@@ -42,8 +43,9 @@
   --btn-bg-1: rgb(166, 57, 255);
   --btn-bg-2: rgb(191, 112, 255);
   --module-bg: rgba(255, 255, 255, 0.7);
-  --bg-1:rgb(255, 244, 254);
-  --bg-2:rgba(255, 244, 254, 0.5);
+  --bg-1: rgb(255, 244, 254);
+  --bg-2: rgba(255, 244, 254, 0.5);
+  --card-bg:rgba(255,255,255,0.3);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -64,8 +66,9 @@
     --btn-bg-1: rgb(95, 30, 148);
     --btn-bg-2: rgb(153, 85, 207);
     --module-bg: rgba(0, 0, 0, 0.7);
-    --bg-1:black;
-    --bg-2:rgba(0, 0, 0, 0.5);
+    --bg-1: black;
+    --bg-2: rgba(0, 0, 0, 0.5);
+    --card-bg:rgba(255,255,255,0.1);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -86,8 +89,9 @@
     --btn-bg-1: rgb(166, 57, 255);
     --btn-bg-2: rgb(191, 112, 255);
     --module-bg: rgba(255, 255, 255, 0.7);
-    --bg-1:rgb(255, 244, 254);
-    --bg-2:rgba(255, 244, 254, 0.5);
+    --bg-1: rgb(255, 244, 254);
+    --bg-2: rgba(255, 244, 254, 0.5);
+    --card-bg:rgba(255,255,255,0.3);
   }
 }
 
@@ -109,6 +113,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   color: white;
+  text-decoration: none;
 
   &:hover {
     background: radial-gradient(
@@ -117,6 +122,11 @@
       var(--btn-bg-2)
     );
   }
+}
+
+:root{
+  --pos-top:0;
+  --pos-left:0;
 }
 // body {
 //   // overflow-y: scroll;

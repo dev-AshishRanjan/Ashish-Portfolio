@@ -12,8 +12,9 @@ const Navbar = ({ mobileHamClicked, setTheme }) => {
   return (
     <div className={styles.navWrapper}>
       <div
-        className={`${styles.navbar} ${mobileHamClicked ? styles.navShow : styles.navHide
-          }`}
+        className={`${styles.navbar} ${
+          mobileHamClicked ? styles.navShow : styles.navHide
+        }`}
       >
         <div className={styles.logo}>
           ASHISH
@@ -34,10 +35,10 @@ const Navbar = ({ mobileHamClicked, setTheme }) => {
               className="btn"
             >
               <option value="light">Light</option>
-              <option value="dark">
-                Dark
+              <option value="dark">Dark</option>
+              <option value="system" selected>
+                System
               </option>
-              <option value="system" selected>System</option>
             </select>
           </div>
           {/* {auth.isLoggedIn ? (

@@ -1,0 +1,38 @@
+[
+  {
+    "id":1,
+    "title":"lol",
+    "talk":"Get recipes for hundreds and thousands of dishes",
+    "techStack":["vue","css-3"]
+  },
+  {
+    "id":2,
+    "title":"erglbj",
+    "talk":"Get recipes for hundreds and thousands of dishes",
+    "techStack":["react","css-3"]
+  },
+  {
+    "id":3,
+    "title":"erglbj",
+    "talk":"Get recipes for hundreds and thousands of dishes",
+    "techStack":["react","vue"]
+  },
+  {
+    "id":4,
+    "title":"lol",
+    "talk":"Get recipes for hundreds and thousands of dishes",
+    "techStack":["nextjs","sass"]
+  },
+  {
+    "id":5,
+    "title":"erglbj",
+    "talk":"Get recipes for hundreds and thousands of dishes",
+    "techStack":["react","vue"]
+  },
+  {
+    "id":6,
+    "title":"lol",
+    "talk":"Get recipes for hundreds and thousands of dishes",
+    "techStack":["nextjs","sass","husky"]
+  }
+]

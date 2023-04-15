@@ -1,52 +1,52 @@
-.background{
+.background {
   background: radial-gradient(
-  circle at 85vw 50vh,
-  var(--heroSection-bg2),
-  var(--heroSection-bg1) 40%
-);
+    circle at 85vw 50vh,
+    var(--heroSection-bg2),
+    var(--heroSection-bg1) 40%
+  );
   position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  .body{
+  .body {
     height: 100vh;
     width: 100vw;
     background: var(--bg-2);
-    overflow: hidden;
+    overflow-x: hidden;
     backdrop-filter: blur(4rem);
   }
-  .cursor{
+  .cursor {
     position: absolute;
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
-    background: linear-gradient(to right,rgb(255, 0, 217),orange);
+    background: linear-gradient(to right, rgb(255, 0, 217), orange);
     animation: cursor_animate 20s linear infinite;
   }
 }
 
 @keyframes cursor_animate {
-  0%{
+  0% {
     rotate: 0deg;
   }
-  50%{
+  50% {
     scale: 1 1.1;
   }
-  75%{
+  75% {
     scale: 1.1 1;
   }
-  100%{
+  100% {
     rotate: 360deg;
   }
 }
-@media (max-width: 769px){
-  .background{
+@media (max-width: 769px) {
+  .background {
     background: radial-gradient(
-    circle at 50vw 80vh,
-    var(--heroSection-bg2),
-    var(--heroSection-bg1) 40%
-  );
+      circle at 50vw 80vh,
+      var(--heroSection-bg2),
+      var(--heroSection-bg1) 40%
+    );
   }
 }

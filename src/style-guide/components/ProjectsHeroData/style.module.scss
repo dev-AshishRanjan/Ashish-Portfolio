@@ -1,0 +1,25 @@
+@use "../../../styles/mixins.scss";
+.ProjectsHero{
+  @include mixins.flexCenter;
+  height: 100vh;
+  font-size: 1.3rem;
+  color: var(--white);
+  padding:3rem;
+  .data{
+    width: 50%;
+  }
+  .lottie{
+    width: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  .ProjectsHero{
+    .data{
+      width: 100%;
+    }
+    .lottie{
+      display: none;
+    }
+  }
+}
