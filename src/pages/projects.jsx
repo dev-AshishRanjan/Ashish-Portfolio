@@ -1,10 +1,8 @@
-import React from 'react';
-import ProjectPage from '@/style-guide/page-components/ProjectPage';
+import React from "react";
+import ProjectPage from "@/style-guide/page-components/ProjectPage";
 
 const Projects = () => {
-  return (
-    <ProjectPage />
-  )
-}
+  return <ProjectPage />;
+};
 
-export default Projects
+export default Projects;

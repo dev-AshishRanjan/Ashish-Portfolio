@@ -1,24 +1,24 @@
 @use "../../../styles/mixins.scss";
-.ProjectsHero{
+.ProjectsHero {
   @include mixins.flexCenter;
   height: 100vh;
   font-size: 1.3rem;
   color: var(--white);
-  padding:3rem;
-  .data{
+  padding: 3rem;
+  .data {
     width: 50%;
   }
-  .lottie{
+  .lottie {
     width: 50%;
   }
 }
 
 @media (max-width: 769px) {
-  .ProjectsHero{
-    .data{
+  .ProjectsHero {
+    .data {
       width: 100%;
     }
-    .lottie{
+    .lottie {
       display: none;
     }
   }

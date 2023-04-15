@@ -1,17 +1,17 @@
 @use "../../../styles/mixins.scss";
-.ProjectCardSection{
+.ProjectCardSection {
   @include mixins.flexCenter;
   flex-direction: column;
   padding: 2rem 1rem;
 
-  h2{
+  h2 {
     font-size: 7rem;
     font-family: "Anton", serif;
     font-weight: 900;
     filter: invert(0.8);
     z-index: -1;
   }
-  .cards{
+  .cards {
     @include mixins.flexCenter;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -19,9 +19,9 @@
   }
 }
 @media (max-width: 768px) {
-  .ProjectCardSection{
+  .ProjectCardSection {
     @include mixins.flexCenter;
-    h2{
+    h2 {
       font-size: 3rem;
     }
   }

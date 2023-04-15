@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
             },
             { duration: 1500, fill: "forwards" }
           );
-        }, 100)
+        }, 100);
       };
     }, 2550);
   };

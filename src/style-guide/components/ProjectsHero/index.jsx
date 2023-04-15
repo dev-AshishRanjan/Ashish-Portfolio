@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./style.module.scss";
 import Lottie from "react-lottie";
 import animationData from "../../../lotties/122824-project-evolution-steps.json";
@@ -18,7 +18,7 @@ const ProjectsHero = () => {
         <Lottie options={defaultOptions} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsHero
+export default ProjectsHero;

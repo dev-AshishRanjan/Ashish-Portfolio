@@ -1,6 +1,6 @@
 @use "../../../styles/mixins.scss";
 
-.card{
+.card {
   @include mixins.flexCenter;
   text-decoration: none;
   align-items: flex-start;
@@ -10,14 +10,14 @@
   padding: 1rem;
   gap: 1.5rem;
 
-  background:var(--card-bg) ;
+  background: var(--card-bg);
   border-radius: 0.3rem;
-  h3{
-    font-size:1.5rem;
+  h3 {
+    font-size: 1.5rem;
   }
 
-  div{
-    svg{
+  div {
+    svg {
       font-size: 2rem;
       margin-right: 1rem;
     }

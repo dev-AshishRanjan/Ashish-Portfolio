@@ -1,6 +1,5 @@
 @use "../../../styles/mixins.scss";
 
-
 .navbar {
   @include mixins.flexCenter;
   z-index: 10;
