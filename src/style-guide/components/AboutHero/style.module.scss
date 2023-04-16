@@ -1,10 +1,10 @@
 @use "../../../styles/mixins.scss";
 .AboutHero {
-  height: 100vh;
+  min-height: 100vh;
   width: 60vw;
   @include mixins.flexCenter;
   flex-direction: column;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   a {
     margin-top: 2rem;
   }
@@ -32,5 +32,6 @@
 @media (max-width: 769px) {
   .AboutHero {
     width: 100vw;
+    justify-content: flex-start;
   }
 }
