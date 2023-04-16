@@ -25,7 +25,7 @@ const HomeHeroSection = () => {
         <div className={styles.typewriter}>
           <Typewriter
             options={{
-              strings: ["Web Developer", "Web Designer", "Dev Ops Enthuisast"],
+              strings: ["Web Developer", "Web Designer", "Dev Ops Enthusiast"],
               autoStart: true,
               loop: true,
             }}

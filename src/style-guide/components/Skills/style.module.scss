@@ -1,0 +1,34 @@
+@use "../../../styles/mixins.scss";
+.skills {
+  height: 100vh;
+  width: 60vw;
+  @include mixins.flexCenter;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  h2 {
+    font-size: 7rem;
+    font-family: "Anton", serif;
+    font-weight: 900;
+    filter: invert(0.8);
+    z-index: -1;
+  }
+  .socials {
+    @include mixins.flexCenter;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    svg {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    width: 100vw;
+    h2 {
+      font-size: 4rem;
+    }
+  }
+}
