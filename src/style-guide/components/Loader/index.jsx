@@ -6,14 +6,16 @@ const Loader = () => {
   const alphas = "abcdefghijklmnopqrstuvwxyz";
   useEffect(() => {
     let count = 0;
-    setInterval(() => {
+    const interval = setInterval(() => {
       let value = ["A", "S", "H", "I", "S", "H"];
       for (var i = Math.floor(count); i < 6; i++) {
         value[i] = alphas[Math.floor(Math.random() * 26)];
       }
       setName(value.join(""));
       count += 1 / 30;
+      console.log("lol");
     }, 10);
+    return () => clearInterval(interval);
   }, []);
   return (
     <div className={styles.loader}>

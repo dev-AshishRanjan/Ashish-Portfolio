@@ -13,6 +13,8 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     loadercall();
+    setTheme(localStorage.getItem("AshishPortfolioTheme") || "system");
+    // document.body.click();
   }, []);
   const loadercall = () => {
     setTimeout(function () {
@@ -45,6 +47,7 @@ const Layout = ({ children }) => {
                 <Navbar
                   mobileHamClicked={mobileHamClicked}
                   setTheme={setTheme}
+                  theme={theme}
                 />
                 <Hamburger
                   mobileHamClicked={mobileHamClicked}

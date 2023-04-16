@@ -5,6 +5,9 @@
   @include mixins.flexCenter;
   flex-direction: column;
   padding: 1rem 3rem;
+  a {
+    margin-top: 2rem;
+  }
   p {
     color: var(--white);
     font-size: 1.2rem;

@@ -33,6 +33,13 @@ const AboutHero = () => {
           );
         })}
       </div>
+      <a
+        href="https://drive.google.com/file/d/1ijBm1tlx0YSaLPrBFogB6jbGrg95DGEv/view?usp=share_link"
+        target="_blank"
+        className="btn"
+      >
+        Resume
+      </a>
     </div>
   );
 };

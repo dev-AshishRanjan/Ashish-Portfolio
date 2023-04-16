@@ -6,10 +6,12 @@ import ProjectCardSection from "../projectCardSection";
 
 const ProjectPage = () => {
   return (
-    <div className={styles.ProjectPage}>
-      <ProjectsHero />
-      <ProjectsHeroData />
-      <ProjectCardSection />
+    <div className={styles.ProjectPageWrapper}>
+      <div className={styles.ProjectPage}>
+        <ProjectsHero />
+        <ProjectsHeroData />
+        <ProjectCardSection />
+      </div>
     </div>
   );
 };
