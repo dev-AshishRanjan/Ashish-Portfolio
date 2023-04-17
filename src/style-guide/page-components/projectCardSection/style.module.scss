@@ -19,7 +19,7 @@
     margin: 3rem 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .ProjectCardSection {
     @include mixins.flexCenter;
     h2 {

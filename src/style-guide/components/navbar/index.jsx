@@ -15,9 +15,8 @@ const Navbar = ({ mobileHamClicked, setTheme, theme }) => {
   return (
     <div className={styles.navWrapper}>
       <div
-        className={`${styles.navbar} ${
-          mobileHamClicked ? styles.navShow : styles.navHide
-        }`}
+        className={`${styles.navbar} ${mobileHamClicked ? styles.navShow : styles.navHide
+          }`}
       >
         <div className={styles.logo}>
           ASHISH
@@ -32,6 +31,13 @@ const Navbar = ({ mobileHamClicked, setTheme, theme }) => {
             HOME
           </Link>
           <Link
+            href="/admin"
+            className={`${activeLink === "admin" ? styles.activeLink : null}`}
+            onClick={() => setActiveLink("admin")}
+          >
+            ADMIN
+          </Link>
+          <Link
             href="/about"
             className={`${activeLink === "about" ? styles.activeLink : null}`}
             onClick={() => setActiveLink("about")}
@@ -40,9 +46,8 @@ const Navbar = ({ mobileHamClicked, setTheme, theme }) => {
           </Link>
           <Link
             href="/projects"
-            className={`${
-              activeLink === "projects" ? styles.activeLink : null
-            }`}
+            className={`${activeLink === "projects" ? styles.activeLink : null
+              }`}
             onClick={() => setActiveLink("projects")}
           >
             PROJECTS

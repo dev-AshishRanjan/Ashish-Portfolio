@@ -1,0 +1,19 @@
+@use "../../../styles/mixins.scss";
+.form {
+  position: absolute;
+  width: 50%;
+  @include mixins.flexCenter;
+  flex-direction: column;
+  gap: 1rem;
+
+  :where(input, textarea, button) {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: var(--card-bg);
+    border: none;
+    outline: none;
+    width: 20rem;
+    resize: none;
+    color: var(--white);
+  }
+}
