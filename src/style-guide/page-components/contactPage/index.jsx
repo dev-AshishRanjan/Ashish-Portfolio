@@ -17,25 +17,30 @@ const ContactPage = () => {
     },
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  // };
   return (
     <div className={styles.ContactPage}>
       <div>
         <Lottie options={defaultOptions} height={400} width={400} />
       </div>
-      <form>
+      <form
+        action="https://formsubmit.co/kumarashishranjan4971@gmail.com"
+        method="POST"
+      >
         <input
           type="text"
           placeholder="Name"
           value={name}
+          name="name"
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="email"
           placeholder="Email"
           value={email}
+          name="email"
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
@@ -47,7 +52,7 @@ const ContactPage = () => {
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
         ></textarea>
-        <button type="submit" className="btn" onClick={handleSubmit}>
+        <button type="submit" className="btn">
           submit
         </button>
       </form>
