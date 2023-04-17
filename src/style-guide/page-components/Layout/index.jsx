@@ -11,9 +11,17 @@ const Layout = ({ children }) => {
   // const [top, setTop] = useState(0);
   // const [left, setLeft] = useState(0);
 
+  const handleScroll = (e) => {
+    e.target.classList.add("on-scrollbar");
+    setTimeout(() => {
+      e.target.classList.remove("on-scrollbar");
+    }, 500);
+  };
+
   useEffect(() => {
     loadercall();
     setTheme(localStorage.getItem("AshishPortfolioTheme") || "system");
+    window.addEventListener("scroll", handleScroll, true);
     // document.body.click();
   }, []);
   const loadercall = () => {
