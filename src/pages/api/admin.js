@@ -2,7 +2,7 @@ export default function handler(req, res) {
   if (req.method === "POST") {
     const { name, password } = JSON.parse(req.body);
     console.log(name, password);
-    if (name === "admin" && password === "admin") {
+    if (name === process.env.NAME && password === process.env.PASSWORD) {
       res.status(200).json({ status: 200, admin: true });
     } else {
       res.status(200).json({ status: 200, admin: false });

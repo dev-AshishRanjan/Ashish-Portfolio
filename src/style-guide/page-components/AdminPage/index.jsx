@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
-import styles from './style.module.scss';
-import AdminLogin from '@/style-guide/components/AdminLogin';
-import AdminPanel from '@/style-guide/components/AdminPanel';
+import React, { useState } from "react";
+import styles from "./style.module.scss";
+import AdminLogin from "@/style-guide/components/AdminLogin";
+import AdminPanel from "@/style-guide/components/AdminPanel";
+import Lottie from "react-lottie";
+import animationData from "../../../lotties/87707-programming-and-website.json";
 
 const AdminPage = () => {
   const [admin, setAdmin] = useState(false);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <div className={styles.AdminPage}>
-      {
-        admin ? <AdminPanel /> : <AdminLogin setAdmin={setAdmin} />
-      }
+      <div className={styles.MainData}>
+        {admin ? <AdminPanel /> : <AdminLogin setAdmin={setAdmin} />}
+      </div>
+      <div className={styles.lottie}>
+        <Lottie options={defaultOptions} height={400} width={400} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminPage
+export default AdminPage;

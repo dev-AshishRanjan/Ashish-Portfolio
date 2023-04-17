@@ -1,6 +1,26 @@
 @use "../../../styles/mixins.scss";
-.AdminPage{
+.AdminPage {
   height: 100vh;
   width: 100vw;
+  overflow-y: auto;
   @include mixins.flexCenter;
+  .MainData {
+    min-height: 100vh;
+    width: 60vw;
+    @include mixins.flexCenter;
+    ::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .AdminPage {
+    .MainData {
+      width: 100vw;
+    }
+    .lottie {
+      display: none !important;
+    }
+  }
 }

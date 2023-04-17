@@ -1,9 +1,7 @@
-import React from 'react';
-import AdminPage from '@/style-guide/page-components/AdminPage';
+import React from "react";
+import AdminPage from "@/style-guide/page-components/AdminPage";
 const Admin = () => {
-  return (
-    <AdminPage />
-  )
-}
+  return <AdminPage />;
+};
 
 export default Admin;
