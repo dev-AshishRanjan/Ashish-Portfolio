@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }) {
           content="kumar, ashish, ranjan, portfolio,NITS, web dev"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#5f5eaa" />
         <link rel="icon" href="/ashish.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/ashish_sm.png" />
