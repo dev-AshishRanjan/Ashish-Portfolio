@@ -18,7 +18,7 @@ const AdminPanel = () => {
   }, []);
   const handleSkillSubmit = (e) => {
     e.preventDefault();
-    fetch("/api/skills", {
+    fetch(`${window.location.origin}/api/skills`, {
       method: "POST",
       body: JSON.stringify({ skills }),
     })
@@ -32,7 +32,7 @@ const AdminPanel = () => {
   };
   const handleProjectSubmit = (e) => {
     e.preventDefault();
-    fetch("/api/projects", {
+    fetch(`${window.location.origin}/api/projects`, {
       method: "POST",
       body: JSON.stringify({ project }),
     })
