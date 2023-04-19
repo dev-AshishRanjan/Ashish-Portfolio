@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 export default function handler(req, res) {
   let skill = fs.readFileSync(
-    path.join(__dirname, "../../../../projects.json"),
+    path.join(process.cwd(), "public", "projects.json"),
     "utf-8"
   );
   skill = JSON.parse(skill);
@@ -11,7 +11,7 @@ export default function handler(req, res) {
     // skill.push(data);
     skills = JSON.parse(skills);
     fs.writeFileSync(
-      path.join(__dirname, "../../../../projects.json"),
+      path.join(process.cwd(), "public", "projects.json"),
       JSON.stringify(skills)
     );
     res.status(200).json({ status: 200, data: skills });

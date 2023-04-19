@@ -11,6 +11,10 @@ export default function App({ Component, pageProps }) {
           name="description"
           content="Portfolio website of Kumar Ashish Ranjan"
         />
+        <meta
+          name="keywords"
+          content="kumar, ashish, ranjan, portfolio,NITS, web dev"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/ashish.png" />
       </Head>
