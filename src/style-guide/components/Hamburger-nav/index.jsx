@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 
 const Hamburger = ({ mobileHamClicked, setMobileHamClicked }) => {
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-    setClicked(!clicked);
+    // setClicked(!clicked);
     setMobileHamClicked(!mobileHamClicked);
   };
   return (
@@ -13,17 +13,17 @@ const Hamburger = ({ mobileHamClicked, setMobileHamClicked }) => {
       <div className={styles.hamMenu} onClick={handleClick}>
         <div
           className={`${styles.ham1} ${
-            clicked ? styles.upperHam : styles.hamInitial
+            mobileHamClicked ? styles.upperHam : styles.hamInitial
           }`}
         ></div>
         <div
           className={`${styles.ham1} ${
-            clicked ? styles.midHam : styles.hamInitial
+            mobileHamClicked ? styles.midHam : styles.hamInitial
           }`}
         ></div>
         <div
           className={`${styles.ham1} ${
-            clicked ? styles.lowerHam : styles.hamInitial
+            mobileHamClicked ? styles.lowerHam : styles.hamInitial
           }`}
         ></div>
       </div>

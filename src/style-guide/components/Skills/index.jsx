@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style.module.scss";
-// import skills from "../../../../skills.json";
+import skills from "../../../../skills.json";
 import { Icon } from "@iconify/react";
 import Spinner from "../spinner";
 
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [skills, setSkills] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    try {
-      fetch("/api/skills")
-        .then((req) => req.json())
-        .then((res) => {
-          setSkills(res.data);
-          setLoading(false);
-        });
-    } catch (e) {
-      alert("Error: " + e.message);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     fetch("/api/skills")
+  //       .then((req) => req.json())
+  //       .then((res) => {
+  //         setSkills(res.data);
+  //         setLoading(false);
+  //       });
+  //   } catch (e) {
+  //     alert("Error: " + e.message);
+  //   }
+  // }, []);
   return (
     <>
       {loading ? (

@@ -5,7 +5,7 @@ import styles from "./style.module.scss";
 import Link from "next/link";
 // import { BsFillSunFill, BsFillMoonFill, BsFillLaptopFill } from "react-icons/bs";
 
-const Navbar = ({ mobileHamClicked, setTheme, theme }) => {
+const Navbar = ({ mobileHamClicked, setMobileHamClicked, setTheme, theme }) => {
   const [activeLink, setActiveLink] = useState(
     window.location.pathname.split("/")[1] || "home"
   );
@@ -27,21 +27,30 @@ const Navbar = ({ mobileHamClicked, setTheme, theme }) => {
           <Link
             href="/"
             className={`${activeLink === "home" ? styles.activeLink : null}`}
-            onClick={() => setActiveLink("home")}
+            onClick={() => {
+              setActiveLink("home");
+              setMobileHamClicked(!mobileHamClicked);
+            }}
           >
             HOME
           </Link>
           <Link
             href="/admin"
             className={`${activeLink === "admin" ? styles.activeLink : null}`}
-            onClick={() => setActiveLink("admin")}
+            onClick={() => {
+              setActiveLink("admin");
+              setMobileHamClicked(!mobileHamClicked);
+            }}
           >
             ADMIN
           </Link>
           <Link
             href="/about"
             className={`${activeLink === "about" ? styles.activeLink : null}`}
-            onClick={() => setActiveLink("about")}
+            onClick={() => {
+              setActiveLink("about");
+              setMobileHamClicked(!mobileHamClicked);
+            }}
           >
             ABOUT
           </Link>
@@ -50,14 +59,20 @@ const Navbar = ({ mobileHamClicked, setTheme, theme }) => {
             className={`${
               activeLink === "projects" ? styles.activeLink : null
             }`}
-            onClick={() => setActiveLink("projects")}
+            onClick={() => {
+              setActiveLink("projects");
+              setMobileHamClicked(!mobileHamClicked);
+            }}
           >
             PROJECTS
           </Link>
           <Link
             href="/contact"
             className={`${activeLink === "contact" ? styles.activeLink : null}`}
-            onClick={() => setActiveLink("contact")}
+            onClick={() => {
+              setActiveLink("contact");
+              setMobileHamClicked(!mobileHamClicked);
+            }}
           >
             CONTACT
           </Link>

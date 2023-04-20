@@ -54,6 +54,7 @@ const Layout = ({ children }) => {
               <div className={styles.body}>
                 <Navbar
                   mobileHamClicked={mobileHamClicked}
+                  setMobileHamClicked={setMobileHamClicked}
                   setTheme={setTheme}
                   theme={theme}
                 />
