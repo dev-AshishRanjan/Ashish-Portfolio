@@ -1,10 +1,30 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import styles from "./style.module.scss";
 import Socials from "../../../../socials.json";
 import { Icon } from "@iconify/react";
+import Spinner from "../spinner";
 
 const AboutHero = () => {
+  const [resumeLink, setResumeLink] = useState();
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    try {
+      fetch("/api/resume")
+        .then((req) => req.json())
+        .then((res) => {
+          console.log({res});
+          setResumeLink(res.data);
+          setLoading(false);
+        });
+    } catch (e) {
+      alert("Error: " + e.message);
+    }
+  }, []);
   return (
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
     <div className={styles.AboutHero}>
       <p>
         While I possess knowledge and expertise in Full-stack Web Development,
@@ -34,14 +54,16 @@ const AboutHero = () => {
         })}
       </div>
       <a
-        href="https://drive.google.com/file/d/1ijBm1tlx0YSaLPrBFogB6jbGrg95DGEv/view?usp=share_link"
+        href={resumeLink}
         target="_blank"
         className="btn"
       >
         Resume
       </a>
     </div>
+  )}
+  </>
   );
-};
+}
 
 export default AboutHero;
