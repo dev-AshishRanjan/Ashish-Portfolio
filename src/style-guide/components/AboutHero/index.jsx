@@ -28,7 +28,7 @@ const AboutHero = () => {
         {Socials.map((ele) => {
           return (
             <a href={ele.link} target="_blank" title={ele.name}>
-              <Icon icon={`cib:${ele.name}`} color="#579"/>
+              <Icon icon={`cib:${ele.name}`} color="#579" />
             </a>
           );
         })}

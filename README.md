@@ -18,6 +18,7 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/dev-AshishRanjan/Ashish-Portfolio)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/dev-AshishRanjan/Ashish-Portfolio)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/dev-AshishRanjan/Ashish-Portfolio)
+
  </p>
 </div>
 
