@@ -1,18 +1,22 @@
 [
   {
     "name": "linkedin",
-    "link": "https://www.linkedin.com/in/kumar-ashish-ranjan-6359b7233/"
+    "link": "https://www.linkedin.com/in/kumar-ashish-ranjan-6359b7233/",
+    "type":"skill-icons"
   },
   {
     "name": "instagram",
-    "link": "https://www.instagram.com/kr.ashishranjan/"
+    "link": "https://www.instagram.com/kr.ashishranjan/",
+    "type":"skill-icons"
   },
   {
     "name": "facebook",
-    "link": "https://www.facebook.com/RASTRASHASTRA/"
+    "link": "https://www.facebook.com/RASTRASHASTRA/",
+    "type":"devicon"
   },
   {
     "name": "github",
-    "link": "https://github.com/dev-AshishRanjan"
+    "link": "https://github.com/dev-AshishRanjan",
+    "type":"cib"
   }
 ]

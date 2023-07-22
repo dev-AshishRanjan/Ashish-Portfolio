@@ -4,7 +4,7 @@
     "title": "CSS Website",
     "talk": "The Official Website of CSS, NITS. It's used for organisizing with Registerations for ABACUS. This is a team Project",
     "techStack": ["nextjs", "css-3", "husky", "typescript"],
-    "link": "https://nitscss.live"
+    "link": "https://www.nits-css.live/"
   },
   {
     "id": 2,
