@@ -5,8 +5,8 @@ var resumeLink = process.env.RESUME_LINK || "";
 
 export default function handler(req, res) {
   if (req.method === "POST") {
-    let link  = req.body;
-    console.log({link});
+    let link = req.body;
+    console.log({ link });
     // link = JSON.parse(link);
     // Optionally, you can perform data validation here before updating the resumeLink
     resumeLink = link;

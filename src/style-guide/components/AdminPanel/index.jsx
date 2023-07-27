@@ -54,7 +54,7 @@ const AdminPanel = () => {
     e.preventDefault();
     fetch(`${window.location.origin}/api/resume`, {
       method: "POST",
-      body:  resume,
+      body: resume,
     })
       .then((req) => req.json())
       .then((res) => {
