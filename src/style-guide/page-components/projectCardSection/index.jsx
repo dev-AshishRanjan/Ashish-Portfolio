@@ -6,7 +6,7 @@ import Spinner from "@/style-guide/components/spinner";
 
 const ProjectCardSection = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     try {

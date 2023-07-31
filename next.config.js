@@ -7,7 +7,14 @@ const withPWA = require("next-pwa")({
 module.exports = withPWA({
   // next.js config
 });
-
+// uncomment to use downloaded fonts
+// const withFonts = require('next-fonts');
+//  module.exports = withFonts({
+//     enableSvg: true,
+//     webpack(config, options) {
+//       return config;
+//     }
+//  });
 // /**
 //  * @type {import('next').NextConfig}
 //  */

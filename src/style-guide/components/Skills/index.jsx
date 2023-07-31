@@ -6,7 +6,7 @@ import Spinner from "../spinner";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     try {

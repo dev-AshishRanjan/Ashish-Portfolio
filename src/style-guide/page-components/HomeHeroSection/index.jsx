@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 import Lottie from "react-lottie";
-import animationData from "../../../lotties/63487-programming-computer.json";
+import animationData from "../../../lotties/profile.json";
 import Typewriter from "typewriter-effect";
 
 const HomeHeroSection = () => {
@@ -33,7 +33,7 @@ const HomeHeroSection = () => {
         </div>
       </div>
       <div className={styles.lottie}>
-        <Lottie options={defaultOptions} height={400} width={400} />
+        {/* <Lottie options={defaultOptions} height={400} width={400} /> */}
       </div>
     </main>
   );

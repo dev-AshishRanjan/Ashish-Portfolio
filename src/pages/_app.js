@@ -2,6 +2,17 @@ import "@/styles/globals.scss";
 import Layout from "@/style-guide/page-components/Layout";
 import Head from "next/head";
 
+// umcomment to use cfour font
+// import localFont from "next/font/local";
+// const myFont = localFont({
+//   src: [
+//     {
+//       path: "../../public/fonts/cfour/Cfour.otf",
+//       weight: "400",
+//     },
+//   ],
+// });
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -22,6 +33,11 @@ export default function App({ Component, pageProps }) {
         <link rel="shortcut icon" href="/ashish_sm.png" />
         <link rel="apple-touch-icon" href="/ashish_sm.png"></link>
       </Head>
+      {/* <style jsx global>{`
+        * {
+          font-family: ${myFont.style.fontFamily};
+        }
+      `}</style> */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
