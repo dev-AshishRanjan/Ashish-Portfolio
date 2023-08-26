@@ -13,6 +13,7 @@ const AboutPage = () => {
         <Gallery />
       </div>
       <img src="/Pic_full.png" alt="" />
+      {/* <img src="/Pic_full.png" alt="" loading="lazy" /> */}
     </div>
   );
 };

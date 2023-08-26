@@ -21,7 +21,12 @@ const Gallery = () => {
           {Pics.map((ele, ind) => {
             return (
               <SwiperSlide className={styles.swiperSlide}>
-                <img src={`/Gallery/${ele}`} alt="" />
+                <img
+                  src={`/Gallery/${ele}`}
+                  alt=""
+                  loading="lazy"
+                  placeholder={`Gallery/s_${ele}`}
+                />
               </SwiperSlide>
             );
           })}
