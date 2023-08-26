@@ -5,6 +5,7 @@ import Skills from "@/style-guide/components/Skills";
 import Gallery from "@/style-guide/components/Gallery";
 
 const AboutPage = () => {
+  const picVal=Math.round(1+(Math.random()*1));
   return (
     <div className={styles.AboutPage}>
       <div className={styles.data}>
@@ -12,7 +13,7 @@ const AboutPage = () => {
         <Skills />
         <Gallery />
       </div>
-      <img src="/Pic_full.png" alt="" />
+      <img src={`/Pic_full${picVal}.png`} alt="" />
       {/* <img src="/Pic_full.png" alt="" loading="lazy" /> */}
     </div>
   );
