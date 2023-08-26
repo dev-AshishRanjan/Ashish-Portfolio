@@ -1,19 +1,22 @@
-// hashnode.js
-const API_KEY = 'YOUR_HASHNODE_API_KEY';
-const API_URL = 'https://api.hashnode.com/';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
-export async function fetchHashnodeBlogs() {
-  try {
-    const response = await fetch(`${API_URL}v1/blog/${API_KEY}/posts`);
+export const client = new ApolloClient({
+  uri: 'https://api.hashnode.com/',
+  cache: new InMemoryCache(),
+});
 
-    if (!response.ok) {
-      throw new Error('Error fetching Hashnode blogs');
+export const getPosts = gql`
+  query GetPosts {
+    user(username: "TechJourneyer") {
+      publication {
+        posts(page: 0) {
+          _id
+          coverImage
+          slug
+          title
+          brief
+        }
+      }
     }
-
-    const data = await response.json();
-    return data.data;
-  } catch (error) {
-    console.error('Error fetching Hashnode blogs:', error);
-    return [];
   }
-}
+`;

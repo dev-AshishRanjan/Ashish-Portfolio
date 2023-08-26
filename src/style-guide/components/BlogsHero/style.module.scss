@@ -1,0 +1,38 @@
+@use "../../../styles/mixins.scss";
+.AboutHero {
+  min-height: 100vh;
+  width: 60vw;
+  @include mixins.flexCenter;
+  flex-direction: column;
+  align-items: flex-start !important;
+  padding: 2rem 3rem;
+  a {
+    margin-top: 2rem;
+  }
+  p {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+    opacity: 0.7;
+  }
+  p:nth-child(3) {
+    opacity: 1;
+  }
+  .socials {
+    @include mixins.flexCenter;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    svg {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .AboutHero {
+    width: 100vw;
+    justify-content: center;
+  }
+}

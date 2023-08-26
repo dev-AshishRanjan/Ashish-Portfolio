@@ -1,0 +1,36 @@
+@use "../../../styles/mixins.scss";
+
+.card {
+  @include mixins.flexCenter;
+  text-decoration: none;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--white);
+  width: 25rem;
+  min-height: 17rem;
+  padding: 1rem;
+  gap: 1.5rem;
+  overflow: hidden;
+
+  background: var(--card-bg);
+  border-radius: 0.3rem;
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    opacity: 0.8;
+    font-size: 1.2rem;
+  }
+  img{
+    position: relative;
+    left: -5%;
+    width: 110%;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 20rem;
+  }
+}
