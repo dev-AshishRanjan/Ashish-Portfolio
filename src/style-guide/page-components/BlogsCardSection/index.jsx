@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 import BlogsCard from "@/style-guide/components/BlogsCard";
-import {getPosts, client} from "@/utils/blog";
+import { getPosts, client } from "@/utils/blog";
 import Spinner from "@/style-guide/components/spinner";
 
 const ProjectCardSection = () => {
@@ -12,7 +12,7 @@ const ProjectCardSection = () => {
     const { data } = await client.query({
       query: getPosts,
     });
-    console.log({data});
+    console.log({ data });
     setPosts(data.user.publication.posts);
     setLoading(false);
   };
@@ -41,7 +41,11 @@ const ProjectCardSection = () => {
               );
             })}
           </div>
-          <a href="https://techjourneyer.hashnode.dev/" className="btn" target="_blank">
+          <a
+            href="https://techjourneyer.hashnode.dev/"
+            className="btn"
+            target="_blank"
+          >
             Visit Hashnode
           </a>
         </div>

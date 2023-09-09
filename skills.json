@@ -18,5 +18,6 @@
   "git",
   "docker",
   "mongodb",
-  "jest"
+  "jest",
+  "astro"
 ]

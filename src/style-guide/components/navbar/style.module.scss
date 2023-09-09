@@ -24,6 +24,9 @@
     );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-background-clip: text;
+    letter-spacing: -0.15rem;
   }
 
   .nav_links {

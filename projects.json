@@ -15,27 +15,55 @@
   },
   {
     "id": 3,
+    "title": "Ashish Portfolio",
+    "talk": "My latest portfolio website with amazing UI. Using client-side for rendering and server-side as backend",
+    "techStack": ["nextjs", "sass", "graphql"],
+    "link": "https://ashish-portfolio-ofc.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Idea Arca",
+    "talk": "Idea Arca (Latin: 'Idea Vault') is a Project Idea Bank, It's created using astro for fast browsing experience. It's my first open-source project.",
+    "techStack": ["astro", "sass"],
+    "link": "https://idea-arca.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "AetherNex",
+    "talk": "Introducing AetherNex, a cutting-edge solution that merges advanced browser technology and meticulous measurement strategies.",
+    "techStack": ["nextjs", "sass"],
+    "link": "https://aethernex.vercel.app/"
+  },
+  {
+    "id": 6,
+    "title": "Vscode Themes",
+    "talk": "Ash Theme is a dark/light VSCode theme specially designed for developers. Blacky is a dark theme specially designed for developers",
+    "techStack": ["vsce","javascript","vscode"],
+    "link": "https://marketplace.visualstudio.com/publishers/KumarAshishRanjan"
+  },
+  {
+    "id": 7,
     "title": "BIDBAZZAR",
     "talk": "This is a live time Bidding website with 3 types of bidding. This was our project for GDSC Explore. This is a team project",
     "techStack": ["nextjs", "sass", "socket-io", "chartjs"],
     "link": "https://bid-bazaar-frontend.vercel.app/"
   },
   {
-    "id": 4,
+    "id": 8,
     "title": "Search Engine",
     "talk": "A search engine created with nextjs an inspired by Zorin Search",
     "techStack": ["nextjs", "sass", "typescript"],
     "link": "https://search-engine-ruby.vercel.app/"
   },
   {
-    "id": 5,
+    "id": 9,
     "title": "Anime Vue Web",
     "talk": "A basic implementation of Vue concepts with anime api",
     "techStack": ["vue", "sass"],
     "link": "https://anime-vue-web.vercel.app/"
   },
   {
-    "id": 6,
+    "id": 10,
     "title": "Alpha Tracker",
     "talk": "A Expense Tracker Website for college students and a team project for NITSHACKS 5.0",
     "techStack": [
@@ -51,14 +79,14 @@
     "link": "https://alpha-tracker.netlify.app/"
   },
   {
-    "id": 7,
+    "id": 11,
     "title": "PWA Movie App",
     "talk": "A Personal Project created with TMDB for movie informations",
     "techStack": ["react", "sass", "chartjs", "framer"],
     "link": "https://movie144.netlify.app"
   },
   {
-    "id": 8,
+    "id": 12,
     "title": "PWA ADV Chat App",
     "talk": "A Personal Project created with socketio. It a PWA chat app with previous chats available",
     "techStack": [
@@ -74,7 +102,7 @@
     "link": "https://github.com/dev-AshishRanjan/Adv-ChatApp"
   },
   {
-    "id": 9,
+    "id": 13,
     "title": "XomoY : Music App",
     "talk": "A Personal Project created for OA of An Interview. It's contains Assamese songs only",
     "techStack": ["react", "sass"],

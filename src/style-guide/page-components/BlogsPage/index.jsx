@@ -1,15 +1,15 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 
-import BlogsHero from '../../components/BlogsHero';
-import BlogsCardSections from '../BlogsCardSection';
+import BlogsHero from "../../components/BlogsHero";
+import BlogsCardSections from "../BlogsCardSection";
 
 const BlogsPage = () => {
   return (
     <div className={styles.ProjectPageWrapper}>
       <div className={styles.ProjectPage}>
-        <BlogsHero/>
-        <BlogsCardSections/>
+        <BlogsHero />
+        <BlogsCardSections />
       </div>
     </div>
   );

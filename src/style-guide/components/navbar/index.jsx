@@ -68,9 +68,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked, setTheme, theme }) => {
           </Link>
           <Link
             href="/blogs"
-            className={`${
-              activeLink === "blogs" ? styles.activeLink : null
-            }`}
+            className={`${activeLink === "blogs" ? styles.activeLink : null}`}
             onClick={() => {
               setActiveLink("blogs");
               setMobileHamClicked(!mobileHamClicked);
