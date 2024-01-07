@@ -4,3 +4,4 @@
 echo "commiting to Ashish's Proftolio"
 npx validate-branch-name
 pnpm run pretty
+git add .

@@ -38,7 +38,7 @@
     "id": 6,
     "title": "Vscode Themes",
     "talk": "Ash Theme is a dark/light VSCode theme specially designed for developers. Blacky is a dark theme specially designed for developers",
-    "techStack": ["vsce","javascript","vscode"],
+    "techStack": ["vsce", "javascript", "vscode"],
     "link": "https://marketplace.visualstudio.com/publishers/KumarAshishRanjan"
   },
   {
