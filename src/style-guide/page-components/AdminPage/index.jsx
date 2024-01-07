@@ -17,12 +17,14 @@ const AdminPage = () => {
   };
   return (
     <div className={styles.AdminPage}>
-      <div className={styles.MainData}>
+      <div className={`${admin ? styles.fullscreen : null} ${styles.MainData}`}>
         {admin ? <AdminPanel /> : <AdminLogin setAdmin={setAdmin} />}
       </div>
-      <div className={styles.lottie}>
-        <Lottie options={defaultOptions} height={400} width={400} />
-      </div>
+      {!admin ? (
+        <div className={styles.lottie}>
+          <Lottie options={defaultOptions} height={400} width={400} />
+        </div>
+      ) : null}
     </div>
   );
 };

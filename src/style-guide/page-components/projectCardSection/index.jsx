@@ -13,7 +13,9 @@ const ProjectCardSection = () => {
       fetch("/api/projects")
         .then((req) => req.json())
         .then((res) => {
-          setData(res.data);
+          const sortData = res.data.sort((a, b) => a.id - b.id);
+          setData(sortData);
+          console.log({ sortData });
           setLoading(false);
         });
     } catch (e) {
@@ -32,6 +34,7 @@ const ProjectCardSection = () => {
             {data.map((ele) => {
               return (
                 <ProjectCard
+                  _id={ele._id}
                   title={ele.title}
                   talk={ele.talk}
                   techStack={ele.techStack}

@@ -30,6 +30,19 @@
       color: var(--white);
       word-wrap: break-word;
     }
+    .cards {
+      margin-top: 2rem;
+      width: 100vw;
+      @include mixins.flexCenter;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .card {
+      @include mixins.flexCenter;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
   }
 }
 

@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style.module.scss";
+import Spinner from "../spinner";
 
 const AdminPanel = () => {
   const [skills, setSkills] = useState();
   const [project, setProject] = useState();
   const [resume, setResume] = useState("");
+  const [projectForm, setProjectForm] = useState([]);
+  const [newProjectData, setNewProjectData] = useState("");
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     fetch("/api/skills")
       .then((req) => req.json())
       .then((res) => {
         setSkills(JSON.stringify(res.data));
       });
-    fetch("/api/projects")
+    fetch("/api/projects", { method: "GET" })
       .then((req) => req.json())
       .then((res) => {
-        setProject(JSON.stringify(res.data));
+        const sortData = res.data.sort((a, b) => a.id - b.id);
+        setProject(sortData);
+        setProjectForm(sortData);
+        setLoading(false);
       });
     fetch("/api/resume")
       .then((req) => req.json())
@@ -22,48 +30,69 @@ const AdminPanel = () => {
         setResume(res.data);
       });
   }, []);
-  const handleSkillSubmit = (e) => {
-    e.preventDefault();
-    fetch(`${window.location.origin}/api/skills`, {
+  const handleProjectRead = () => {
+    setLoading(true);
+    fetch("/api/projects", { method: "GET" })
+      .then((req) => req.json())
+      .then((res) => {
+        const sortData = res.data.sort((a, b) => a.id - b.id);
+        setProject(sortData);
+        setProjectForm(sortData);
+        setLoading(false);
+      });
+  };
+  const handleProjectCreate = () => {
+    setLoading(true);
+    fetch(`/api/projects`, {
       method: "POST",
-      body: JSON.stringify({ skills }),
+      headers: { "Content-Type": "multipart/form-data" },
+      body: newProjectData,
     })
       .then((req) => req.json())
       .then((res) => {
         console.log({ res });
-        if (res.status === 200) {
+        handleProjectRead();
+        setNewProjectData("");
+        if (res.status === 201) {
           alert("Success!");
         }
       });
   };
-  const handleProjectSubmit = (e) => {
-    e.preventDefault();
-    fetch(`${window.location.origin}/api/projects`, {
-      method: "POST",
-      body: JSON.stringify({ project }),
+  const handleProjectUpdate = (id) => {
+    setLoading(true);
+    const data = projectForm.find((ele) => ele._id === id);
+    console.log(data);
+    fetch(`/api/projects?id=${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "multipart/form-data" },
+      body: JSON.stringify(data),
     })
       .then((req) => req.json())
       .then((res) => {
         console.log({ res });
-        if (res.status === 200) {
+        handleProjectRead();
+        if (res.status === 201) {
           alert("Success!");
         }
       });
   };
-  const handleResumeSubmit = (e) => {
-    e.preventDefault();
-    fetch(`${window.location.origin}/api/resume`, {
-      method: "POST",
-      body: resume,
+  const handleProjectDelete = (id) => {
+    setLoading(true);
+    fetch(`/api/projects?id=${id}`, {
+      method: "DELETE",
     })
       .then((req) => req.json())
       .then((res) => {
         console.log({ res });
-        if (res.status === 200) {
+        handleProjectRead();
+        if (res.status === 201) {
           alert("Success!");
         }
       });
   };
+  if (loading) {
+    return <Spinner />;
+  }
   return (
     <div className={styles.AdminPanel}>
       <div className={styles.group}>
@@ -76,23 +105,6 @@ const AdminPanel = () => {
           value={skills}
           onChange={(e) => setSkills(e.target.value)}
         ></textarea>
-        <button type="submit" className="btn" onClick={handleSkillSubmit}>
-          submit
-        </button>
-      </div>
-      <div className={styles.group}>
-        <h2>Projects</h2>
-        <textarea
-          name="projects"
-          id="projects"
-          cols="30"
-          rows="20"
-          value={project}
-          onChange={(e) => setProject(e.target.value)}
-        ></textarea>
-        <button type="submit" className="btn" onClick={handleProjectSubmit}>
-          submit
-        </button>
       </div>
       <div className={styles.group}>
         <h2>Resume</h2>
@@ -104,9 +116,69 @@ const AdminPanel = () => {
           value={resume}
           onChange={(e) => setResume(e.target.value)}
         ></textarea>
-        <button type="submit" className="btn" onClick={handleResumeSubmit}>
-          submit
-        </button>
+      </div>
+      <div className={styles.group}>
+        <h2>Projects</h2>
+        <div className={styles.card}>
+          <div className={styles.card}>
+            <textarea
+              name="cproject"
+              id="cproject"
+              cols="10"
+              rows="10"
+              value={newProjectData}
+              onChange={(e) => {
+                setNewProjectData(e.target.value);
+              }}
+              placeholder="Please provide {id,title,talk,techStack,link}"
+            ></textarea>
+            <button
+              type="submit"
+              className="btn"
+              onClick={() => handleProjectCreate()}
+            >
+              create
+            </button>
+          </div>
+        </div>
+        <div className={styles.cards}>
+          {project &&
+            project.map((ele) => {
+              return (
+                <div className={styles.card} key={ele._id}>
+                  <textarea
+                    name="project"
+                    id="project"
+                    cols="10"
+                    rows="10"
+                    value={JSON.stringify(
+                      projectForm.find((el) => el._id === ele._id)
+                    )}
+                    onChange={(e) => {
+                      setProjectForm([
+                        [...projectForm.filter((el) => el._id !== ele._id)],
+                        JSON.parse(e.target.value),
+                      ]);
+                    }}
+                  ></textarea>
+                  <button
+                    type="submit"
+                    className="btn"
+                    onClick={() => handleProjectUpdate(ele._id)}
+                  >
+                    update
+                  </button>
+                  <button
+                    type="submit"
+                    className="btn"
+                    onClick={() => handleProjectDelete(ele._id)}
+                  >
+                    delete
+                  </button>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );
