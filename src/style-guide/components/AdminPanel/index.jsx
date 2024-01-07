@@ -152,7 +152,7 @@ const AdminPanel = () => {
                     cols="10"
                     rows="10"
                     value={JSON.stringify(
-                      projectForm.find((el) => el._id === ele._id)
+                      projectForm.find((el) => el._id === ele._id),
                     )}
                     onChange={(e) => {
                       setProjectForm([

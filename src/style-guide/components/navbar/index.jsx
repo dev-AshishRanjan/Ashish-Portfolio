@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Navbar = ({ mobileHamClicked, setMobileHamClicked, setTheme, theme }) => {
   const [activeLink, setActiveLink] = useState(
-    window.location.pathname.split("/")[1] || "home"
+    window.location.pathname.split("/")[1] || "home",
   );
   // const auth = useContext(AuthContext);
   // const [theme, setTheme] = useState("dark");

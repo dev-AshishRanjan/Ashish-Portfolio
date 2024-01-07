@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
               left: `calc(${clientX}px - 120px)`,
               top: `calc(${clientY}px - 120px)`,
             },
-            { duration: 1500, fill: "forwards" }
+            { duration: 1500, fill: "forwards" },
           );
         }, 100);
       };

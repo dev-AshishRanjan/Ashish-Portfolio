@@ -35,7 +35,7 @@ const handler = async (req, res) => {
         const updateData = await ProjectSchemas.findByIdAndUpdate(
           req.query.id,
           req.body,
-          { new: true } // Return the updated document
+          { new: true }, // Return the updated document
         );
         if (updateData) {
           res.status(200).json({ data: updateData });
