@@ -13,7 +13,7 @@ const ProjectCardSection = () => {
       query: getPosts,
     });
     console.log({ data });
-    setPosts(data.user.publication.posts);
+    setPosts(data?.publication?.posts?.edges);
     setLoading(false);
   };
 
@@ -33,10 +33,10 @@ const ProjectCardSection = () => {
             {posts.map((ele) => {
               return (
                 <BlogsCard
-                  title={ele.title}
-                  talk={ele.brief}
-                  coverImage={ele.coverImage}
-                  link={`https://techjourneyer.hashnode.dev/${ele.slug}`}
+                  title={ele.node.title}
+                  talk={ele.node.brief}
+                  coverImage={ele.node.coverImage.url}
+                  link={`https://techjourneyer.hashnode.dev/${ele.node.slug}`}
                 />
               );
             })}
